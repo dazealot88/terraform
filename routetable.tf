@@ -1,7 +1,7 @@
 
 
 # Creating Route Tables For the Public Subnet
-resource "aws_route_table" "public-route" {
+resource "aws_route_table" "public-rt" {
     vpc_id = aws_vpc.team-demo.id
     
 
@@ -12,15 +12,15 @@ resource "aws_route_table" "public-route" {
     }
   
   tags = {
-    Name = "public-route"
+    Name = "public-rt"
   }
 }
 
 # Creating A Route Table For the Private Subnet
-resource "aws_route_table" "private-route" {
+resource "aws_route_table" "private-rt" {
     vpc_id = aws_vpc.team-demo.id
   
   tags = {
-    Name = "private-route"
+    Name = "private-rt"
   }
 }
